@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     eslint(),
     {
-      handleHotUpdate({ file, server  }) {
+      handleHotUpdate({ file, server }) {
         if (file.endsWith('.php')) {
           server.ws.send({
             type: 'full-reload',
@@ -22,8 +22,8 @@ export default defineConfig({
     alias: [
       {
         find: '@/src',
-        replacement: process.env.NODE_ENV === 'development' ?
-          resolve(__dirname, `${TEMPLATE_PATH}/src/`) : resolve(__dirname, 'src/')
+        replacement: process.env.NODE_ENV === 'development'
+          ? resolve(__dirname, `${TEMPLATE_PATH}/src/`) : resolve(__dirname, 'src/')
       }
     ]
   },
@@ -32,25 +32,24 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname + '/src/scripts/app.js')
+        main: resolve(__dirname + '/src/scripts/main.js')
       },
       output: {
         assetFileNames: assetInfo => {
-          let extType = assetInfo.name.split('.').at(1);
+          const extType = assetInfo.name.split('.').at(1);
           if (/png|jpe?g|svg|gif|tiff|webp|bmp|ico/i.test(extType)) {
-            return `assets/[name][extname]`
-          } else {
-            return `assets/[name]-[hash][extname]`
+            return 'assets/[name][extname]'
           }
+          return 'assets/[name]-[hash][extname]'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js'
       }
     }
   },
   server: {
     cors: {
-      origin: "*"
+      origin: '*'
     }
   }
 })

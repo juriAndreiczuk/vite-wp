@@ -1,18 +1,10 @@
-import './../styles/app.scss'
 import barba from '@barba/core'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import appState from './AppState'
+import { prototypePage } from './Page'
+import { emitter } from './Emitter'
+import { delay } from './utils'
 
-import appState from './core/AppState'
-import { prototypePage } from './core/Page'
-import { emitter } from './core/Emitter'
-import { delay } from './core/utils'
-
-gsap.registerPlugin(ScrollTrigger)
-window.ScrollTrigger = ScrollTrigger
-window.gsap = gsap
-
-class App {
+export default class App {
   constructor() {
     this.appStart()
   }
@@ -38,5 +30,3 @@ class App {
     })
   }
 }
-
-const app = new App()

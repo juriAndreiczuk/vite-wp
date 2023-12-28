@@ -10,7 +10,7 @@ class ViteConfig {
   public $dist_path;
 
   const VITE_SERVER = 'http://localhost:5173';
-  const VITE_ENTRY_POINT = '/src/scripts/app.js';
+  const VITE_ENTRY_POINT = '/src/scripts/main.js';
 
   public function __construct() {
     $this->dist_uri = get_template_directory_uri() . '/' . $this->dist_dir;
@@ -28,8 +28,8 @@ class ViteConfig {
     } else {
       $manifest = json_decode(file_get_contents($this->dist_path . '/manifest.json'), true);
       if (is_array($manifest)) {
-        wp_enqueue_style('main', $this->dist_uri . '/' . $manifest['src/scripts/app.js']['css']['0'], array(), false, 'screen');
-        wp_enqueue_script('main', $this->dist_uri . '/' . $manifest['src/scripts/app.js']['file'], array(), false, true);
+        wp_enqueue_style('main', $this->dist_uri . '/' . $manifest['src/scripts/main.js']['css']['0'], array(), false, 'screen');
+        wp_enqueue_script('main', $this->dist_uri . '/' . $manifest['src/scripts/main.js']['file'], array(), false, true);
       }
     }
   }
