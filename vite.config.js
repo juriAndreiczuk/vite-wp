@@ -1,10 +1,22 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 import eslint from 'vite-plugin-eslint'
 
 const TEMPLATE_PATH = 'wp-content/themes/vite-wp'
 
 export default defineConfig({
+  css: {
+    postcss: {
+      plugins: [tailwindcss(), autoprefixer()],
+    },
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['legacy-js-api'],
+      }
+    }
+  },
   plugins: [
     eslint(),
     {

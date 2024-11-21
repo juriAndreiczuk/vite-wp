@@ -6,7 +6,6 @@ body,
 a,
 p,
 button {
-  font-family: $normal-font;
   font-weight: 400;
 }
 
@@ -16,7 +15,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $normal-font;
   font-weight: 700;
 }
 
@@ -35,27 +33,15 @@ video {
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: transparentize($main-color, .2) transparent;
   scroll-behavior: smooth;
   &::-webkit-scrollbar {
     width: 10px;
   } 
-  &::-webkit-scrollbar {
-    background-color: transparent; /* or add it to the track */
-  }
-  &::-webkit-scrollbar-thumb {
-    background:  transparentize($main-color, .2);
-  }
 }
 
 select:focus,
 button:focus {
   outline: none;
-}
-
-input:focus,
-textarea:focus {
-  outline: $main-color;
 }
 
 section {

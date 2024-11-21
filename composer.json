@@ -1,0 +1,14 @@
+{
+  "require": {
+    "eftec/bladeone": "^4.13",
+    "filp/whoops": "^2.16"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "rm composer.lock"
+    ],
+    "post-update-cmd": [
+      "rm composer.lock"
+    ]
+  }
+}

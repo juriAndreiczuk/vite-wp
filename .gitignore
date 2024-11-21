@@ -1,5 +1,6 @@
 *.log
 .htaccess
+.DS_Store
 wp-config.php
 /license.txt
 /readme.html

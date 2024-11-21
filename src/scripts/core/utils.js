@@ -49,7 +49,7 @@ export const delay = (n = 100) =>
   new Promise((done) => setTimeout(() => done(), n))
 
 export const flexSize = size =>
-  screen.width > 1920 ? `${(size / 1920) * 100}vw` : `${size}px`
+  screen.width > 1200 ? `${(size / 1200) * 100}vw` : `${size}px`
 
 export const addLinksBlank = links => {
   if(links.length) {
