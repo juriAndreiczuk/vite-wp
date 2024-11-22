@@ -23,7 +23,6 @@
       - **scss**
         |
         - **base** - styles for tags and resetting browser default settings
-        - **layout** - styles for custom grid + reusable components without reference to any section (_page-component)
         - **modules** - styles for sections and components
         - **utilities** - variables, functions, and mixins
         - `app.scss` - main SCSS file (only for importing other files)
