@@ -12,12 +12,17 @@
   },
   "devDependencies": {
     "@barba/core": "^2.9.7",
+    "@types/node": "^22.15.18",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-typescript": "^4.3.4",
     "eslint-plugin-import": "^2.29.1",
     "gsap": "^3.12.4",
     "sass": "^1.69.5",
+    "typescript": "^5.8.3",
     "vite": "^4.4.7",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-php": "^1.0.5"

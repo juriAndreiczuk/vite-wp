@@ -10,7 +10,7 @@ class ViteConfig {
   public $dist_path;
 
   const VITE_SERVER = 'http://localhost:5173';
-  const VITE_ENTRY_POINT = '/src/scripts/main.js';
+  const VITE_ENTRY_POINT = '/src/scripts/main.ts';
 
   public function __construct() {
     $this->dist_uri = get_template_directory_uri() . '/' . $this->dist_dir;

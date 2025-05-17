@@ -1,0 +1,12 @@
+<?php /* Template Name: Homepage */ ?>
+
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('content'); ?>
+<div class="main-info" data-barba="container" data-barba-namespace="homepage">
+ <div class="container">
+ <h1 class="text-12 font-body">Home page</h1>
+ </div>
+</div>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.default'); } ?>

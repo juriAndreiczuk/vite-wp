@@ -18,7 +18,11 @@ export default defineConfig({
     }
   },
   plugins: [
-    eslint(),
+    eslint({
+      cache: false,
+      include: ['src/**/*.ts', 'src/**/*.tsx'],
+      exclude: ['node_modules']
+    }),
     {
       handleHotUpdate({ file, server }) {
         if (file.endsWith('.php')) {
@@ -44,7 +48,7 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname + '/src/scripts/main.js')
+        main: resolve(__dirname + '/src/scripts/main.ts')
       },
       output: {
         assetFileNames: assetInfo => {

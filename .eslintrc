@@ -1,13 +1,35 @@
+
+
 {
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "extends": [
-    "airbnb-base"
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended"
   ],
   "ignorePatterns": [
-    "src/scripts/core/*.js"
+    "src/scripts/core/*.ts"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+      }
+    }
   ],
   "rules": {
+    "import/extensions": ["error", "ignorePackages", {
+      "ts": "never",
+      "js": "never"
+    }],
+
     "semi": "off",
     "require-jsdoc": "off",
+    "lines-between-class-members": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "padding-line-between-statements": "off",
     "no-undef": "off",
     "no-empty-function": "off",
     "no-floating-decimal": "off",
@@ -30,6 +52,14 @@
     "import/no-useless-path-segments": "off",
     "import/no-mutable-exports": "off",
     "no-param-reassign": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }
