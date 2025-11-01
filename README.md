@@ -24,17 +24,17 @@ Vite runs on port `5173` by default. Ensure `VITE_ENVIRONMENT_TYPE` is set to `d
 ## Build & Deployment
 - `yarn build` – creates the production bundle in `dist/` and generates `manifest.json`
 - `yarn preview` – serves the production build locally for final checks
-- Deploy the `dist/` directory along with the theme files when moving to production. In production mode the manifest is read by `inc/core/vite.config.php` to enqueue hashed assets.
+- Deploy the `dist/` directory along with the theme files when moving to production. In production mode the manifest is read by `includes/setup/vite.config.php` to enqueue hashed assets.
 
 ## Project Structure
 - `functions.php` – boots BladeOne, registers helpers, and wires the Vite asset loader
-- `inc/` – PHP helpers split into `core`, `helpers`, and `posts` modules
+- `includes/` – PHP helpers grouped into `setup`, `helpers`, and `posts`
+- `views/` – Blade templates organised into `layouts`, `partials`, `components`, and `pages`
 - `src/` – front-end sources
   - `scripts/core` – state management, Barba.js router, utilities, base classes
   - `scripts/modules` – reusable component logic
   - `scripts/pages` – page-level controllers
   - `styles/scss` – base styles, modules, utilities, and the `app.scss` entry
-- `views/` – Blade templates organised into `layouts`, `partials`, `components`, and `pages`
 
 ## Routing & Transitions
 `src/scripts/main.ts` registers pages and modules with Barba.js. Each “page” class extends the shared `Page` base (see `src/scripts/core`) and participates in navigation lifecycle hooks, allowing animated transitions and per-page logic without reloading the browser.
