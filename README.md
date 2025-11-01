@@ -41,6 +41,6 @@ Vite runs on port `5173` by default. Ensure `VITE_ENVIRONMENT_TYPE` is set to `d
 
 ## Useful Notes
 - ESLint (Airbnb base) runs during `yarn dev` to keep TypeScript clean.
-- Tailwind configuration lives in `tailwind.config.js`; extend it as needed.
+- Tailwind configuration lives in `tailwind.config.ts`; extend it as needed.
 - The Blade template cache is stored in `cache/`. WordPress writes to this directory, so make sure it is writable on your server.
 - Composer is configured to remove `composer.lock` on install/update to keep the theme dependency-less for distribution.
