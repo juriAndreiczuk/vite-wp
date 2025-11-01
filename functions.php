@@ -22,13 +22,13 @@ if(VITE_ENVIRONMENT_TYPE === 'dev' && defined( 'WP_DEBUG' ) && WP_DEBUG) {
   $whoops->register();
 }
 
-require_once 'inc/core/load-blade-templates.php';
-require_once 'inc/core/theme-setup.php';
-require_once 'inc/core/script-modifier.php';
-require_once 'inc/core/vite.config.php';
-require_once 'inc/posts/load-posts.php';
-require_once 'inc/posts/post-type-custom.php';
-require_once 'inc/helpers/utils.php';
-require_once 'inc/helpers/migrate_database.php';
+require_once 'includes/setup/load-blade-templates.php';
+require_once 'includes/setup/theme-setup.php';
+require_once 'includes/setup/script-modifier.php';
+require_once 'includes/setup/vite.config.php';
+require_once 'includes/posts/load-posts.php';
+require_once 'includes/posts/post-type-custom.php';
+require_once 'includes/helpers/utils.php';
+require_once 'includes/helpers/migrate_database.php';
 
 ViteConfig::init();

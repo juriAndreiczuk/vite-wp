@@ -22,7 +22,7 @@ jobs:
         yarn install
         yarn build
     - name: 📂 Sync files
-      uses: ./deploy
+      uses: ./.github/deploy
       with:
         local-dir: ./
         server: ${{ secrets.ftp_dev_server }}
@@ -34,7 +34,7 @@ jobs:
           **/.git*/**
           **/node_modules/**
           **/src/**
-          wp-content/themes/vite-wp/deploy
+          wp-content/themes/vite-wp/.github
           .eslintrc
           .gitignore
           package.json

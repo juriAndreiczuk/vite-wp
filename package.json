@@ -11,7 +11,7 @@
     "postupdate": "rm -f yarn.lock",
     "lint": "eslint \"src/**/*.{ts,js}\"",
     "lint:fix": "eslint \"src/**/*.{ts,js}\" --fix",
-    "format": "prettier --write \"src/**/*.ts\" \"views/**/*.blade.php\""
+    "format": "prettier --write \"src/**/*.ts\" \"core/views/**/*.blade.php\""
   },
   "devDependencies": {
     "@barba/core": "^2.9.7",
