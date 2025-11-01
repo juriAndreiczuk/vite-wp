@@ -1,4 +1,6 @@
-interface IModule { mainWrap: HTMLElement | null }
+interface IModule {
+  mainWrap: HTMLElement | null
+}
 
 export interface IHeader extends IModule {
   navLinks: NodeListOf<HTMLAnchorElement> | undefined

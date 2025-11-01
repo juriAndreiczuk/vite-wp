@@ -17,9 +17,9 @@ class Header implements IHeader {
   toggleMod(val: string) {
     if (!this.mainWrap) return
 
-    const currentModification = (this.mainWrap.className)
+    const currentModification = this.mainWrap.className
       .split(' ')
-      .filter(item => item.indexOf('--') !== -1)
+      .filter((item) => item.indexOf('--') !== -1)
     if (currentModification.length) {
       this.mainWrap.classList.remove(currentModification[0])
     }

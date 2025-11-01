@@ -18,12 +18,10 @@ class AppState implements IAppState {
   constructor() {
     this.currentPage = ''
 
-    emitter.subscribe('changePage', (val: string) => {  this.currentPage = val })
-    this.pages = [
-      Error,
-      Homepage,
-      Posts
-    ]
+    emitter.subscribe('changePage', (val: string) => {
+      this.currentPage = val
+    })
+    this.pages = [Error, Homepage, Posts]
     this.header = new Header('.header')
     this.footer = new Footer('.footer')
   }

@@ -8,13 +8,11 @@ class Footer implements IFooter {
   }
 
   hideAnimation() {
-    gsap.timeline()
-      .to(this.mainWrap, { opacity: 0 })
+    gsap.timeline().to(this.mainWrap, { opacity: 0 })
   }
 
   showAnimation() {
-    gsap.timeline()
-      .to(this.mainWrap, { opacity: 1 })
+    gsap.timeline().to(this.mainWrap, { opacity: 1 })
   }
 }
 

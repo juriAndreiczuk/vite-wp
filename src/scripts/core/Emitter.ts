@@ -14,7 +14,7 @@ class Emitter {
       return false
     }
 
-    this.listeners[event].forEach(listener => {
+    this.listeners[event].forEach((listener) => {
       listener(args)
     })
   }
@@ -26,4 +26,3 @@ class Emitter {
 }
 
 export const emitter = new Emitter()
-

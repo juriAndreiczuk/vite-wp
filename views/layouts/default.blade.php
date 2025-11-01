@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="msapplication-TileColor" content="#333333">
   <meta name="theme-color" content="#ffffff">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ get_template_directory_uri() }}/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon"
+    href="{{ get_template_directory_uri() }}/favicon.ico" />
   @php wp_head(); @endphp
 </head>
 
@@ -20,8 +21,9 @@
   </div>
 
   <script>
-    var ajaxurl = '<?= admin_url('admin-ajax.php'); ?>';
+    var ajaxurl = '<?= admin_url('admin-ajax.php') ?>';
   </script>
   @php wp_footer(); @endphp
 </body>
+
 </html>

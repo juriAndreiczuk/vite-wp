@@ -1,0 +1,6 @@
+node_modules
+vendor
+cache
+dist
+*.log
+yarn.lock

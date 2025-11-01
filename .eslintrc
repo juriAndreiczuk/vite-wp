@@ -2,10 +2,11 @@
 
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "airbnb-base",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
   "ignorePatterns": [
     "src/scripts/core/*.ts"
@@ -54,6 +55,7 @@
     "no-param-reassign": "off",
     "consistent-return": "off",
 
+    "prettier/prettier": ["error"],
     "@typescript-eslint/no-unused-vars": ["warn"],
     "@typescript-eslint/no-explicit-any": "off"
   },
