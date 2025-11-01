@@ -4,7 +4,7 @@ import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import eslint from 'vite-plugin-eslint'
 
-const TEMPLATE_PATH = 'wp-content/themes/vite-wp'
+const TEMPLATE_PATH = 'wp-content/themes/TailBlade-WP'
 
 export default defineConfig({
   css: {
