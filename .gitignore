@@ -13,3 +13,4 @@ npm-debug.log
 yarn.lock
 /vendor
 /cache
+/db_backup
